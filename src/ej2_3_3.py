@@ -1,6 +1,6 @@
 # Escribir un programa que pida al usuario un número entero positivo y muestre por pantalla la cuenta atrás desde ese número hasta cero separados por comas. Deberá solicitar el número hasta introducir uno correcto.
 
-def cuentaAtras(num, xd):
+def cuentaAtras(num):
     if num <= 0:
         raise ValueError('El número no puede ser negativa: ' + str(num))
     for i in range(num, -1, -1):
@@ -10,16 +10,15 @@ def cuentaAtras(num, xd):
             print(i)
 
 def main():
-    xd = 0
-    while xd == 0:
+    while True:
         try:
             num = int(input("Introduce un número: "))
-            cuentaAtras(num, xd)
+            cuentaAtras(num)
         except ValueError as e:
             print(e)
-
-
-
+        else:
+            if num > 0:
+                break
 
 if __name__ == "__main__":
     main()
