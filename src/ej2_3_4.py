@@ -10,8 +10,8 @@ def esEntero(num):
         return "Bieen"
 
 def main():
-    num = input("Introduce un número entero: ")
     try:
+        num = input("Introduce un número entero: ")
         esEntero(num)
     except TypeError as e:
         print(e)

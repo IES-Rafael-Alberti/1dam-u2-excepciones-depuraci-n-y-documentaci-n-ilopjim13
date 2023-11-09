@@ -12,15 +12,14 @@ def ordenarLista(a):
                 a[rango] = a[rango + 1]
                 a[rango + 1] = o
             rango += 1
+        rango=0
         total -= 1
     return a
 
 
 def main():
     a = [8, 3, 1, 19, 14]
-    listaOrdenada = ordenarLista(a)
-    print(listaOrdenada)
-    #print(obtenerListaOrdenada(listaOrdenada))
+    print(ordenarLista(a))
 
 if __name__ == "__main__":
     main()
